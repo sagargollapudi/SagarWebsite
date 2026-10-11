@@ -140,6 +140,22 @@ a {
     color: var(--text-primary);
 }
 
+.nav-links a.active {
+    color: var(--accent-color) !important;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-1);
+    border-radius: 2px;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -771,4 +787,273 @@ a {
 
 .form-status.error {
     color: #f87171;
+}
+
+/* Presentations Page */
+.page-banner {
+    padding: 9rem 2rem 4rem;
+    text-align: center;
+    background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.15), transparent 70%);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.banner-badge {
+    display: inline-block;
+    padding: 0.4rem 1.25rem;
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--accent-color);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.page-title {
+    font-size: 3.25rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.presentations-section {
+    padding: 4rem 0 6rem;
+}
+
+.presentations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.year-block {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.year-header {
+    position: sticky;
+    top: 6rem;
+}
+
+.year-badge {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    background: var(--glass-bg);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    padding: 0.5rem 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+}
+
+.year-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.presentation-card {
+    padding: 2rem;
+    border-radius: 18px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.presentation-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25), 0 0 25px rgba(59, 130, 246, 0.1);
+}
+
+.presentation-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.3rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+}
+
+.tag-ai {
+    background: rgba(139, 92, 246, 0.15);
+    color: #c084fc;
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.tag-safe {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.tag-metrics {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.tag-scaling {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.tag-culture {
+    background: rgba(236, 72, 153, 0.15);
+    color: #f472b6;
+    border-color: rgba(236, 72, 153, 0.3);
+}
+
+.tag-faculty, .tag-community {
+    background: rgba(14, 165, 233, 0.15);
+    color: #38bdf8;
+    border-color: rgba(14, 165, 233, 0.3);
+}
+
+.tag-infra, .tag-data, .tag-research {
+    background: rgba(148, 163, 184, 0.15);
+    color: #cbd5e1;
+    border-color: rgba(148, 163, 184, 0.3);
+}
+
+.presentation-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.presentation-title {
+    font-size: 1.4rem;
+    line-height: 1.35;
+    margin-bottom: 0.6rem;
+    color: var(--text-primary);
+}
+
+.presentation-venue {
+    font-size: 1.05rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.venue-icon {
+    font-size: 1.1rem;
+}
+
+.presentation-note {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid var(--accent-color);
+    padding: 0.5rem 0.85rem;
+    border-radius: 4px;
+    margin-bottom: 0.85rem;
+}
+
+.presentation-description {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.presentation-link-wrapper {
+    margin-top: 1rem;
+}
+
+.external-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.external-link:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+    transform: translateX(4px);
+}
+
+/* Speaking CTA */
+.speaking-cta {
+    margin-top: 4rem;
+    padding: 3rem;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.speaking-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.speaking-cta p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 620px;
+    margin: 0 auto 2rem;
+}
+
+/* Presentations Responsive */
+@media (max-width: 850px) {
+    .year-block {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .year-header {
+        position: static;
+    }
+
+    .page-title {
+        font-size: 2.4rem;
+    }
+
+    .speaking-cta {
+        padding: 2rem 1.5rem;
+    }
 }
